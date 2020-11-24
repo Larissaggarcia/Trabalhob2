@@ -35,21 +35,21 @@
                                  <output type="number" name="CPF">
 								
                         </p>
-						<div id="carrinho">
-                           <h2>Carrinho</h2>
+						<div id="areadocliente">
+                           <h2>Area do Cliente</h2>
                                     </div>
 								<script>
-                                exibeCarrinho = () => {        //<!------ Area onde mostra no perfil do cliente o carrinho de compras --->
-                var containerCarrinho = document.getElementById('carrinho');
+                                exibearea = () => {        //<!------ Area onde mostra no perfil do cliente o carrinho de compras --->
+                var containerareadocliente = document.getElementById('area do cliente');
 
                 var items = JSON.parse( sessionStorage.items );
 
                 console.log(items);
 
-                containerCarrinho.innerHTML = "";
+                containerareadocliente.innerHTML = "";
                 items.map((val)=>{
                     if (val.quantidade > 0){
-                        containerCarrinho.innerHTML += `
+                        containerareadocliente.innerHTML += `
                         <p>Item:`+val.nome+` | Qtde:`+val.quantidade+`  </p>
                         <hr>
                         `;
@@ -57,7 +57,7 @@
                 })
             }
 
-            exibeCarrinho();
+            exibeareadocliente();
 
         </script>
 								
