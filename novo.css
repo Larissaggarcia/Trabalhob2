@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-family: Arial;
+}
+
+header {
+	width: auto;
+  	overflow: hidden;
+  	position: relative;
+}
+
+body{  
+	margin-bottom: 100px;
+}  
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+h1 {
+	text-align: center;
+	margin-right: 100%;
+	margin-left: 10px;
+	margin-top: 100px;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	font-size: 1.5rem;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+  }
+/*cabeçalho*/
+.barraprincipal {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+
+.botoes {
+	display: flex;
+}
+
+.barraprincipal li{
+	margin-left: 10px;
+
+}
+
+.barraprincipal li a{
+	padding: 20px;
+	font-size: 1rem;
+	
+}
+
+.barraprincipal {
+	background-color: #4682B4;
+}
+
+.barraprincipal li a{
+	padding-top: 0px;
+	height: 100%; 
+	width:  100%;
+	background-color: #4682B4;
+	color: white;
+	text-decoration: none;
+	display: inline; 
+	line-height:15px;
+}
+/*logo ou nome da loja*/
+#logo {
+	margin-left: 15%;
+	color: black;
+}
+
+#sobrenos {
+    height: 100% ;
+    width: 100%;
+	background-color:  #C1CDCD ;
+}
