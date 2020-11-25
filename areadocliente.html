@@ -6,12 +6,11 @@
 		<title>Janis's Store</title> 
 		<script src="/script-cliente.js"></script>
 	</head>
-<<<<<<< HEAD
 	<body onload="renderItem()">
 		<header class="barraprincipal">
 			<a href="index.html" id="logo">Janis's Store</a>  
 			<nav>												<!-- aponta para uma secao com links de navegacao-->
-			<ul class="botoes">
+				<ul class="botoes">
 				<li><a href="sobrenos.html" class="links">Sobre Nós</a></li>
 				<li><a href="contatos.html" class="links">Contatos</a></li>
 				<li><a href="cadastro.html" class="links">Cadastro</a></li>
@@ -23,61 +22,6 @@
 		</header>
 
 		
-=======
-		<body>
-		
-			<header class="barraprincipal">
-				<a href="./index.html" id="logo">Janis's Store</a>  
-				<nav>												<!-- aponta para uma secao com links de navegacao-->
-				<ul class="botoes">
-					<li><a href="sobrenos.html" class="links">Sobre Nós</a></li>
-					<li><a href="contatos.html" class="links">Contatos</a></li>
-					<li><a href="cadastro.html" class="links">Cadastro</a></li>
-					<li><a href="promocoes.html" class="links">Promocoes</a></li>
-					<li><a href="areadocliente.html" class="links">Area do Cliente</a></li>
-					<li><a href="carrinho.html" class="links">Carrinho</a></li>
-				</ul>
-				</nav>
-
-			</header>
-				<div id="Area do Cliente">            <!--Area de informações do cliente pós cadastro--->
-				                           <form name="Perfilcliente" method="post">
-										 <h1> Perfil do Cliente<center></h1>
-						<p class="Nome">
-                                 <output type="text" name="nome">
-                            </p>								 
-						<p class="email">
-                                 <output type="email" name="email">	
-                      </p>		
-                   
-                        <p Class="CPF">
-                                 <output type="number" name="CPF">
-								
-                        </p>
-						<div id="areadocliente">
-                           <h2>Area do Cliente</h2>
-                                    </div>
-								<script>
-                                exibearea = () => {        //<!------ Area onde mostra no perfil do cliente o carrinho de compras --->
-                var containerareadocliente = document.getElementById('area do cliente');
-
-                var items = JSON.parse( sessionStorage.items );
-
-                console.log(items);
-
-                containerareadocliente.innerHTML = "";
-                items.map((val)=>{
-                    if (val.quantidade > 0){
-                        containerareadocliente.innerHTML += `
-                        <p>Item:`+val.nome+` | Qtde:`+val.quantidade+`  </p>
-                        <hr>
-                        `;
-                    }
-                })
-            }
-
-            exibeareadocliente();
->>>>>>> 8e61ba02db473eb16dee90d8e749dd6e12e54753
 
 		<div class="area-do-cliente">
 			<h1>Area do Cliente</h1>
