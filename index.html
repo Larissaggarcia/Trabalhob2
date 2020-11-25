@@ -32,14 +32,13 @@
 				<div id="comprar">Sem Produtos..</div>
 			</div>
 			
-			<button type="submit" id="comprar-pro"><a href="">Comprar</p></button>
+			<button type="submit" id="comprar-pro"><a href="">Finalizar</p></button>
 
 			<script>
 //	<-! 
 				const items = [
 				{
 						id: 0,
-						class: "produto",
 						img: "./img/camisetabobmascw.jpg",
 						nome: "Camiseta Masculina Bob Marley Branca",
 						preco: "R$45,00",
@@ -126,7 +125,7 @@
                 items.map((val)=>{                                                     // <!-- map em js  retorna o valor do item equivalente no array resultante-->
                     if (val.quantidade > 0){
                         containerCarrinho.innerHTML += `
-                        <p>Item: `+val.nome+` | Qtde:`+val.quantidade+`</p>
+                        <p>Item: `+val.nome+` | Qtde:`+val.quantidade+` | Preco:`+val.preco+` </p>
                         `;
                     }
                 })
@@ -147,4 +146,4 @@
 
     </body>
 </html>
-		</body>
+		

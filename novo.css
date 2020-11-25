@@ -84,8 +84,19 @@ img {
 	color: black;
 }
 
-#sobrenos {
-    height: 100% ;
-    width: 100%;
-	background-color:  #C1CDCD ;
+#sobrenos {	
+	height:100%;
+	text-align: center;
+	padding-top: 15%;
+	padding-left: 40%;
+
+}
+
+#banner-sn{ 
+	height: 100%;
+	padding-bottom: 30%;
+	background-image: url(./img/wsn.jpg);
+	background-size: cover;
+
+
 }
