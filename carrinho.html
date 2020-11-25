@@ -18,18 +18,18 @@
 					<li><a href="areadocliente.html" class="links">Area do Cliente</a></li>
 					<li><a href="carrinho.html" class="links">Carrinho</a></li>
 				</ul>
-				</nav>
+                </nav>
 
 			</header>
 
-        <div id="carrinho">
-            <h2>Carrinho</h2>
-        </div>
-
+            <div id="produtos">
+                <div id="carrinho"></div>
+                
+            </div>
         <script>
 
             exibeCarrinho = () => {
-                var containerCarrinho = document.getElementById('carrinho');
+                var containerCarrinho = document.getElementById('produtos');
 
                 var items = JSON.parse( sessionStorage.items );
 
@@ -39,9 +39,12 @@
                 items.map((val)=>{
                     if (val.quantidade > 0){
                         containerCarrinho.innerHTML += `
-                        <p>Item:`+val.nome+` | Qtde:`+val.quantidade+` | Preco:`+val.preco+` </p>
-                        <hr>
-
+                        <div id="produtos-carrinho">
+                            <img src="`+val.img+`" class="produto"/>
+                            <p>produto: `+val.nome+`</p>
+                            <p class= "valpreco>Quantidade: `+val.quantidade+`</p>
+                            <p class= "valpreco>Preço: `+val.preco+` </p>
+                        </div>
                         `;
                     }
                 })
@@ -50,6 +53,12 @@
             exibeCarrinho();
 
         </script>
+        <style>
+            #produtos {
+                width: 50%;
+                margin-top: 10%;
+            }
+        </style>
 
     </body>
 </html>
