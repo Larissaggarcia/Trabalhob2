@@ -4,6 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="./estilob2.css"/>
 		<meta charset="utf-8">
 		<title>Janis's Store</title> 
+		<script src="./script-cadastro.js"></script>
 	</head>
 		<body>
 		
@@ -22,22 +23,22 @@
 
 			</header>
 		<div id="formcadastro">
-					<form name="cadastrojanis" action="areadocliente.html" method="post">
+					<form name="cadastrojanis" action="areadocliente.html">
 						<h1>Cadastro do cliente</h1>
 						
 							<p class="nome">
-								<input type="text" name="nome" placeholder="Ex: Antonio Souza" required="required">
+								<input type="text" id="nome" name="nome" placeholder="Ex: Antonio Souza" required="required">
 							</p>
                        
-							<p class="email">
-								<input type="email" name="email" placeholder="Ex: antoniosouza@gmail.com" required="required">
+							<p class="email"> 
+								<input type="email" id="email" name="email" placeholder="Ex: antoniosouza@gmail.com" required="required">
 							</p>
 
 							<p class="CPF">
-								<input type="number" name="CPF" placeholder="xxx.xxx.xxx-xx" required="required">
+								<input type="number" id="senha" name="senha" placeholder="xxxxx" required="required">
 							
 							<p class="enviar">
-								<input type="submit" name="enviar" value="Enviar">
+								<input type="submit" name="enviar" onclick="cadastro()" value="Enviar">
 							</p>
 					</form>
 				</div>
