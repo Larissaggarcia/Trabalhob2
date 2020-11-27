@@ -84,6 +84,7 @@ img {
 	flex-wrap: wrap;
 	max-width: 60%;
 	margin: 0 auto;
+	padding-bottom: 10%;
 }
 
 #produtos > div {
@@ -242,6 +243,8 @@ img {
 	width: 100%;
 	height: 100%;
 	color: black;
+	padding-bottom: 10%;
+
 }
 
 #textpromo{
