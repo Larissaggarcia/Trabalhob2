@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html> 
 	<head>
-		<link rel="stylesheet" type="text/css" href="./estilob2.css"/>
+		<link rel="stylesheet" type="text/css" href="./novo.css"/>
 		<meta charset="utf-8">
 		<title>Janis's Store</title> 
 	</head>
@@ -18,30 +18,40 @@
 					<li><a href="areadocliente.html" class="links">Area do Cliente</a></li>
 					<li><a href="carrinho.html" class="links">Carrinho</a></li>
 				</ul>
-				</nav>
+                </nav>
 
 			</header>
-
-        <div id="carrinho">
-            <h2>Carrinho</h2>
-        </div>
-
+            <div id="produtos">
+                <div id="carrinho"></div>
+            </div>
+        <div id="botaocomprar">
+            <center>
+            </br>
+            </br>
+            <form name="carrinho" action="finalizar.html" method="post">
+                <input type="submit" value="Comprar" onclick="comprar()"></form>
+            </center>
+            </div>
         <script>
 
             exibeCarrinho = () => {
-                var containerCarrinho = document.getElementById('carrinho');
+                var containerCarrinho = document.getElementById('produtos');
 
                 var items = JSON.parse( sessionStorage.items );
 
-                console.log(items);
+                console.log(items[7])
 
                 containerCarrinho.innerHTML = "";
                 items.map((val)=>{
                     if (val.quantidade > 0){
                         containerCarrinho.innerHTML += `
-                        <p>Item:`+val.nome+` | Qtde:`+val.quantidade+` | Preco:`+val.preco+` </p>
-                        <hr>
-
+                        <div id="produtos-carrinho">
+                            <img src="`+val.img+`" class="produto"/>
+                            <p>produto: `+val.nome+`</p>
+                            <p>quantidade: `+val.quantidade+`</p>
+                            <p class= "valpreco>Quantidade: `+val.quantidade+`</p>
+                            <p class= "valpreco>Preço: `+val.preco+` </p>
+                        </div>
                         `;
                     }
                 })
@@ -49,7 +59,18 @@
 
             exibeCarrinho();
 
+            function comprar() {
+                for (var i=1;i<8;i++){
+                    items[i].quantidade = 0;
+                }
+            }
         </script>
+        <style>
+            #produtos {
+                width: 50%;
+                margin-top: 10%;
+            }
+        </style>
 
     </body>
 </html>

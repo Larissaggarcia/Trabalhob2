@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<link rel="stylesheet" type="text/css" href="./novo.css"/>
+		<meta charset="utf-8">
+		<title>Janis's Store</title> 
+	</head>
+		<body>
+		
+			<header class="barraprincipal">
+				<a href="index.html" id="logo">Janis's Store</a>  
+				<nav>												<!-- aponta para uma secao com links de navegacao-->
+				<ul class="botoes">
+					<li><a href="sobrenos.html" class="links">Sobre Nós</a></li>
+					<li><a href="contatos.html" class="links">Contatos</a></li>
+					<li><a href="cadastro.html" class="links">Cadastro</a></li>
+					<li><a href="promocoes.html" class="links">Promocoes</a></li>
+					<li><a href="areadocliente.html" class="links">Area do Cliente</a></li>
+					<li><a href="carrinho.html" class="links">Carrinho</a></li>
+				</ul>
+				</nav>
+
+            </header>
+            <div id="finalizar">
+                <form name="finalizar" action="msgfinalizar.html" method="post">
+                    <p><b>Digite seu email para finalizarmos a sua compra por lá!</b></p>
+                    </br>
+
+                    <p class="email">
+                        <input type="email" name="email" placeholder="Ex: antoniosouza@gmail.com" required="required">
+                    </br>
+                    </p>
+                </br>
+                    <p class="enviar">
+                        <input type="submit"  name="enviar" onclick="finalizar()" value="Enviar">
+                    </p>
+                </form>
+        </div>
+    </body>
+</html>

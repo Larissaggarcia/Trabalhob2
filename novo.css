@@ -210,7 +210,6 @@ img {
 
 /*pagina do cliente*/
 .area-do-cliente {
-	background-color: #C1CDCD;
 	padding-top: 5%;
 	text-align: center;
 	height:100%;
@@ -230,14 +229,18 @@ img {
 
 /*carrinho*/
 #produtos {
-	width:50%;
-	/*margin-top: 10%;*/                        
+	width:50%;             
 }
+
+#botaocomprar{ 
+	padding-bottom: 10%;
+}
+
+
 /*promocoes*/
 #promocoes{
 	width: 100%;
 	height: 100%;
-	/*padding-top:5%;*/
 	color: black;
 }
 
@@ -247,3 +250,24 @@ img {
 	font-size: 20px;
 
 }
+
+/*finalizacao do carrinho com compra direcionada ao email*/
+#finalizar{
+	margin-top: 5%;
+	margin-left: 15%;
+	text-align: center;
+	background-color:  #C1CDCD ;
+	border-radius: 10px; 
+	width:70%; 
+	color: black;
+	height: 5%;
+	font-size: 16px;
+
+ }
+
+ #msgfinal{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding-top: 5%;
+ }
