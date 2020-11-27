@@ -47,6 +47,7 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px;
+	background-color: #4682B4;
 }
 
 .botoes {
@@ -59,16 +60,6 @@ img {
 }
 
 .barraprincipal li a{
-	padding: 20px;
-	font-size: 1rem;
-	
-}
-
-.barraprincipal {
-	background-color: #4682B4;
-}
-
-.barraprincipal li a{
 	padding-top: 0px;
 	height: 100%; 
 	width:  100%;
@@ -77,6 +68,8 @@ img {
 	text-decoration: none;
 	display: inline; 
 	line-height:15px;
+	padding: 20px;
+	font-size: 1rem;
 }
 
 /*logo ou nome da loja*/
@@ -84,6 +77,81 @@ img {
 	margin-left: 15%;
 	color: black;
 }
+
+/*produtos*/
+#produtos { 
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+#produtos > div {
+	flex: 1 1 200px;
+	margin: 10px;
+}
+
+#produtos a {
+	color: #4682B4;
+}
+
+.valpreco { 
+	color: red;
+}
+
+/*carrinho*/
+#caixa-de-compra {
+	background-color: white;
+	border: 3px solid #000000dc; 
+	width: 17%;
+	height: 75%;
+	float: right;
+	position: fixed;
+    right: 0;
+    top: 25%;
+    flex-direction: column;
+}
+
+#caixa-de-compra h2 {
+	float: inline-start;
+	margin-top: -23%;
+} 
+
+#comprar {
+	width: 90%;
+	margin: 5%;
+	margin-top: 23%;
+}
+
+#comprar p {
+	font-size: 1rem;
+	margin-bottom: 10%;
+}
+
+#comprar p:hover {
+	color: #4682B4;
+}
+
+#comprar-pro {
+	position: fixed;
+	width: 10%;
+	height: 5%;
+	right: 4%;
+	top: 90%;
+
+	padding: 0;
+	color: white;
+	background-color: black;
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	border-radius: 10px;
+}
+
+#comprar-pro:hover {
+	color: #4682B4;
+}
+
 
 /*pagina sobre nos*/
 #sobrenos {	
@@ -105,7 +173,8 @@ img {
 
 /*formulario de contato*/
 #formcontato{
-	margin-left: 15%; 
+	margin-top: 5%;
+	margin-left: 15%;
 	text-align: center;
 	background-color:  #C1CDCD ;
 	border-radius: 10px; 
@@ -115,11 +184,20 @@ img {
 	font-size: 16px;
 
 }
+#contatofeito{
+	padding-top: 15%;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	color: black;
+	
+}
 
 /*formulario de cadastro*/
 
 #formcadastro{
-	margin-left: 15%; 
+	margin-top: 5%;
+	margin-left: 15%;
 	text-align: center;
 	background-color:  #C1CDCD ;
 	border-radius: 10px; 
@@ -132,18 +210,16 @@ img {
 
 /*pagina do cliente*/
 .area-do-cliente {
-	height:100%;
-	color: black;
+	background-color: #C1CDCD;
+	padding-top: 5%;
 	text-align: center;
-	padding-left: 40%;
+	height:100%;
+	width: 100%;
+	color: black;
+	padding-bottom: 5%;
+
 
 	
-}
-.area-do-cliente h1 {
-	text-align: center;
-	padding-bottom: 50%;
-    font-size: 2rem;
-
 }
 
 .area-do-cliente div {
@@ -151,9 +227,23 @@ img {
 	
 }
 
-#banner-ac{
-	height: 100%;	
-	padding-bottom: 80%; 
-	background-image: url(./img/area.jpg);
-	background-size: cover;
+
+/*carrinho*/
+#produtos {
+	width:50%;
+	/*margin-top: 10%;*/                        
+}
+/*promocoes*/
+#promocoes{
+	width: 100%;
+	height: 100%;
+	/*padding-top:5%;*/
+	color: black;
+}
+
+#textpromo{
+	text-align:center;
+	padding: 20px;
+	font-size: 20px;
+
 }
