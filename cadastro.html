@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html> 
 	<head>
-		<link rel="stylesheet" type="text/css" href="./estilob2.css"/>
+		<link rel="stylesheet" type="text/css" href="./novo.css"/>
 		<meta charset="utf-8">
 		<title>Janis's Store</title> 
+
 		<script src="./script-cadastro.js"></script>
+
+
 	</head>
 		<body>
 		
@@ -24,19 +27,32 @@
 			</header>
 		<div id="formcadastro">
 					<form name="cadastrojanis" action="areadocliente.html">
-						<h1>Cadastro do cliente</h1>
-						
+						<center>
+							</br>
+							<p><b>Cadastro do cliente</b></p>
+							</br>
+				
+						</center>
+
 							<p class="nome">
 								<input type="text" id="nome" name="nome" placeholder="Ex: Antonio Souza" required="required">
+							</br>
+							</br>
 							</p>
                        
 							<p class="email"> 
 								<input type="email" id="email" name="email" placeholder="Ex: antoniosouza@gmail.com" required="required">
+							</br>
+							</br>
 							</p>
 
 							<p class="CPF">
-								<input type="number" id="senha" name="senha" placeholder="xxxxx" required="required">
-							
+								<input type="number" id="senha" name="senha" placeholder="xxx.xxx.xxx-xx" required="required">
+							</br>
+							</br>
+							</br>
+							</p>
+
 							<p class="enviar">
 								<input type="submit" name="enviar" onclick="cadastro()" value="Enviar">
 							</p>
