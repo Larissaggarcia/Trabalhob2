@@ -21,11 +21,11 @@
                 </nav>
 
 			</header>
-
+            <form >
             <div id="produtos">
                 <div id="carrinho"></div>
-                
             </div>
+            <input type="submit" value="Comprar" onclick="comprar()"></form>
         <script>
 
             exibeCarrinho = () => {
@@ -33,7 +33,7 @@
 
                 var items = JSON.parse( sessionStorage.items );
 
-                console.log(items);
+                console.log(items[7])
 
                 containerCarrinho.innerHTML = "";
                 items.map((val)=>{
@@ -42,6 +42,7 @@
                         <div id="produtos-carrinho">
                             <img src="`+val.img+`" class="produto"/>
                             <p>produto: `+val.nome+`</p>
+                            <p>quantidade: `+val.quantidade+`</p>
                             <p class= "valpreco>Quantidade: `+val.quantidade+`</p>
                             <p class= "valpreco>Preço: `+val.preco+` </p>
                         </div>
@@ -52,6 +53,11 @@
 
             exibeCarrinho();
 
+            function comprar() {
+                for (var i=1;i<8;i++){
+                    items[i].quantidade = 0;
+                }
+            }
         </script>
         <style>
             #produtos {
