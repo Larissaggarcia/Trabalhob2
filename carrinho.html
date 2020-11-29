@@ -1,79 +1,59 @@
 <!DOCTYPE html>
-<html> 
-	<head>
-		<link rel="stylesheet" type="text/css" href="./novo.css"/>
-		<meta charset="utf-8">
-		<title>Janis's Store</title> 
-	</head>
-		<body>
-		
-			<header class="barraprincipal">
-				<a href="./index.html" id="logo">Janis's Store</a>  
-				<nav>												<!-- aponta para uma secao com links de navegacao-->
-				<ul class="botoes">
-					<li><a href="sobrenos.html" class="links">Sobre Nós</a></li>
-					<li><a href="contatos.html" class="links">Contatos</a></li>
-					<li><a href="cadastro.html" class="links">Cadastro</a></li>
-					<li><a href="promocoes.html" class="links">Promocoes</a></li>
-					<li><a href="areadocliente.html" class="links">Area do Cliente</a></li>
-					<li><a href="carrinho.html" class="links">Carrinho</a></li>
-				</ul>
-                </nav>
+<html>
 
-			</header>
+<head>
+    <link rel="stylesheet" type="text/css" href="./novo.css" />
+    <meta charset="utf-8">
+    <title>Janis's Store</title>
+    <script src="loja.js"></script>
+</head>
 
-            <div id="produtos">
-                <div id="carrinho"></div>
-            </div>
-        <div id="botaocomprar">
-            <center>
-            </br>
-            </br>
+<body>
+
+    <header class="barraprincipal">
+        <a href="index.html" id="logo">Janis's Store</a>
+        <nav>
+            <!-- aponta para uma secao com links de navegacao-->
+            <ul class="botoes">
+                <li><a href="promocoes.html" class="links">Promoções</a></li>
+                <li><a href="sobrenos.html" class="links">Sobre Nós</a></li>
+                <li><a href="contatos.html" class="links">Contatos</a></li>
+                <li><a href="cadastro.html" class="links">Cadastro</a></li>
+                <li><a href="areadocliente.html" class="links">Área do Cliente</a></li>
+                <li><a href="carrinho.html" class="links">Carrinho</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div id="produtos">
+        <div id="carrinho"></div>
+    </div>
+    <div id="total"></div>
+    <div id="botaocomprar">
+        <center>
             <form name="carrinho" action="finalizar.html" method="post">
-                <input type="submit" value="Comprar" onclick="comprar()"></form>
-            </center>
+                <input type="submit" value="Finalizar Compra" onclick="comprar()">
+            </form>
+        </center>
+    </div>
+    <script>
 
-            </div>
-           
-        <script>
 
-            exibeCarrinho = () => {
-                var containerCarrinho = document.getElementById('produtos');
+        exibeCarrinho();
 
-                var items = JSON.parse( sessionStorage.items );
+        function comprar() {
+            sessionStorage.items = "";
+            sessionStorage.total = 0;
+        }
+    </script>
+    <style>
+        #produtos {
+            width: 50%;
+            margin-top: 10%;
+        }
+    </style>
 
-                console.log(items[7])
+</body>
 
-                containerCarrinho.innerHTML = "";
-                items.map((val)=>{
-                    if (val.quantidade > 0){
-                        containerCarrinho.innerHTML += `
-                        <div id="produtos-carrinho">
-                            <img src="`+val.img+`" class="produto"/>
-                            <p>produto: `+val.nome+`</p>
-                            <p>quantidade: `+val.quantidade+`</p>
-                            <p class= "valpreco>Quantidade: `+val.quantidade+`</p>
-                            <p class= "valpreco>Preço: `+val.preco+` </p>
-                        </div>
-                        `;
-                    }
-                })
-            }
-
-            exibeCarrinho();
-
-            function comprar() {
-                for (var i=1;i<8;i++){
-                    items[i].quantidade = 0;
-                }
-            }
-        </script>
-        <style>
-            #produtos {
-                width: 50%;
-                margin-top: 10%;
-            }
-        </style>
-
-    </body>
 </html>

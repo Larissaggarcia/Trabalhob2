@@ -26,7 +26,7 @@
 
 			</header>
 		<div id="formcadastro">
-					<form name="cadastrojanis" action="areadocliente.html">
+					<form name="cadastrojanis" action="areadocliente.html" method="post" onsubmit="return validar();"> 
 						<center>
 							</br>
 							<p><b>Cadastro do cliente</b></p>
@@ -53,7 +53,11 @@
 							</p>
 
 							<p class="Senha">
-								<input type="number" id="senha" name="senha" placeholder="*******" required="required">
+								<input type="number" id="senha" name="senha" placeholder="Digite aqui sua senha: " required="required">
+							</br>
+							</br>
+
+							<input type="password" id="senha2" name="senha2" placeholder="Repita sua senha" required="required">
 							</br>
 							</br>
 							</br>
